@@ -1,4 +1,4 @@
-import { Client, Databases, ID, Query, TablesDB } from "appwrite";
+import { Client, ID, Query, TablesDB } from "appwrite";
 import type { Movie } from './src/types/movie';
 
 const client = new Client();
