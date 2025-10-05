@@ -1,7 +1,11 @@
 import { Search } from "lucide-react"
-import { useState } from "react"
-function SearchComp() {
-  const [movie,setMovie] = useState("")
+
+interface compProps{
+  movie:string,
+  setMovie: React.Dispatch<React.SetStateAction<string>>;
+}
+
+function SearchComp({movie,setMovie}: compProps ) {
   return (
     <div className="relative  mt-4">
     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"/>
@@ -11,9 +15,9 @@ function SearchComp() {
    name="movie"
    value={movie}
    onChange={(e)=>{setMovie(e.target.value)}}
-   
+   placeholder="Search any movie "
     />
-   <h1>{movie}</h1>
+
     </div>
     
   )
